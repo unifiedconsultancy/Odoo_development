@@ -11,13 +11,8 @@
         <field name="model">loan.application</field>
         <field name="arch" type="xml">
             <form>
-                <header>
-                    <button title="Send Application" string="Send" type="object" name="action_send" />
-                    <button title="Approve Loan" string="Approve" type="object" name="action_approve" />
-                    <button title="Reject Loan" string="Reject" type="object" name="action_reject" />
-                </header>
-            </form>
 
+            </form>
         </field>
     </record>
 
