@@ -34,7 +34,7 @@
     <!-- Action Menu -->
     <record id="action_financing" model="ir.action.act_window">
         <field name="name">Motor Cycle Financing</field>
-        <field name="res_model">financing.model</field>
+        <field name="res_model">loan.application</field>
         <field name="view_mode">list,form</field>
     </record>
 

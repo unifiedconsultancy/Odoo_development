@@ -16,7 +16,7 @@
 
     <menuitem id="motorcycle_financing_root" name="Financing">
         <menuitem id="motorcycle_financing_app_menu" name="Motorcycle Financing">
-            <menuitem id="motorcycle_financing_loan" name="Loan Application" action="loan_application_action"/>
+            <menuitem id="motorcycle_financing_loan" name="Loan Application" action="action_financing"/>
         </menuitem>
     </menuitem>
 
