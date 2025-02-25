@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="motor_cycle_finance_list_view" model="ir.ui.view">
-        <field name="name">loan.application.view.list</field>
-        <field name="model">loan.application</field>
-        <field name="arch" type="xml">
-            <list string="Motorcycle Financing">
-                <field name="name"/>
-            </list>
-        </field>
-    </record>
-
-    <record id="motor_cycle_finance_root" model="ir.actions.act_window">
+    <record id="motor_cycle_finance_action" model="ir.actions.act_window">
         <field name="name">Loan Application</field>
         <field name="res_model">loan.application</field>
         <field name="view_mode">list,form</field>
-        <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">
-                Add a new Motor Cycle Finance Appliation
-            </p>
+    </record>
+
+    <record id="motor_cycle_finance_form_view" model="ir.ui.view">
+        <field name="name">loan.application.form.list</field>
+        <field name="model">loan.application</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button title="Send Application" string="Send" type="object" name="action_send" />
+                    <button title="Approve Loan" string="Approve" type="object" name="action_approve" />
+                    <button title="Reject Loan" string="Reject" type="object" name="action_reject" />
+                </header>
+            </form>
+
         </field>
     </record>
+
 </odoo>

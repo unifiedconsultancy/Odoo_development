@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Top menu item -->
+    <!--
     <menuitem
-        id="motor_cycle_finance_root_menu"
-        name="Motor Cycle Finance"
+        id="motor_cycle_finance_root"
+        name=Financing"
         sequence="10"/>
 
     <menuitem
@@ -11,6 +12,12 @@
         name="Financing"
         parent="motor_cycle_finance_root_menu"
         action="motor_cycle_finance_root"
-        sequence="10"/>
+        sequence="10"/> -->
+
+    <menuitem id="motorcycle_financing_root" name="Financing">
+        <menuitem id="motorcycle_financing_app_menu" name="Motorcycle Financing">
+            <menuitem id="motorcycle_financing_loan" name="Loan Application" action="loan_application_action"/>
+        </menuitem>
+    </menuitem>
 
 </odoo>
