@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Top menu item -->
-    <!--
-    <menuitem
-        id="motor_cycle_finance_root"
-        name=Financing"
-        sequence="10"/>
-
-    <menuitem
-        id="motor_cycle_finance_menu"
-        name="Financing"
-        parent="motor_cycle_finance_root_menu"
-        action="motor_cycle_finance_root"
-        sequence="10"/> -->
-
-    <menuitem id="motorcycle_financing_root" name="Financing">
+    <!--Root Menu-->
+    <menuitem id="motorcycle_financing_root" name="Financing" action="">
+        <!--Main Menu-->
         <menuitem id="motorcycle_financing_app_menu" name="Motorcycle Financing">
+            <!--Sub Menu-->
             <menuitem id="motorcycle_financing_loan" name="Loan Application" action="action_financing"/>
         </menuitem>
     </menuitem>

@@ -10,8 +10,8 @@
         'security/res_groups.xml',
         'security/ir.model.access.csv',
         #Views
-        #'views/loan_application_views.xml',
-        #'views/motorcycle_financing_menu.xml',
+        'views/loan_application_views.xml',
+        'views/motorcycle_financing_menu.xml',
         #Menu
     ],
     'demo': [
