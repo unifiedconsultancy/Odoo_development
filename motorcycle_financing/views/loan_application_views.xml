@@ -27,7 +27,7 @@
     </record>
     -->
     <!-- Action Menu -->
-    <record id="action_financing" model="ir.action.act_window">
+    <record id="action_financing" model="ir.actions.act_window">
         <field name="name">Financing</field>
         <field name="res_model">loan.application</field>
         <field name="view_mode">list,form</field>
