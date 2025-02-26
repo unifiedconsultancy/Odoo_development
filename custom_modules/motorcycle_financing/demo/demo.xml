@@ -6,7 +6,7 @@
             <field name="interest_rate">0.056</field>
             <field name="loan_amount">15000</field>
             <field name="loan_term">32</field>
-            <field name="state">Draft</field>
+            <field name="state">draft</field>
         </record>
 
         <record id="2" model="loan.application">
@@ -15,7 +15,7 @@
             <field name="interest_rate">0.09</field>
             <field name="loan_amount">9000</field>
             <field name="loan_term">24</field>
-            <field name="state">Signed</field>
+            <field name="state">signed</field>
         </record>
 
         <record id="3" model="loan.application">
@@ -24,7 +24,7 @@
             <field name="interest_rate">0.0548</field>
             <field name="loan_amount">25000</field>
             <field name="loan_term">64</field>
-            <field name="state">Approved</field>
+            <field name="state">approved</field>
         </record>
     </data>
 </odoo>
