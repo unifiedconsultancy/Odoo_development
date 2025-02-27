@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_motorcycle_financing,loan.application,model_loan_application,base.group_user,1,1,1,0
+mc_financing_admin,Loan Application Admin,model_loan_application,financing_admin,1,1,1,1
+mc_financing_user,Loan Application User,model_loan_application,financing_user,1,1,1,0
+loan_app_all_user,Loan Application All User,model_loan_application,base.group_user,1,1,1,0
