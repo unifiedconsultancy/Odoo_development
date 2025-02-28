@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Root Menu-->
+    <menuitem id="motorcycle_financing_root" name="Financing" action="">
+        <!--Main Menu-->
+        <menuitem id="motorcycle_financing_app_menu" name="Motorcycle Financing">
+            <!--Sub Menu-->
+            <menuitem id="motorcycle_financing_loan" name="Loan Application" action="action_financing"/>
+        </menuitem>
+    </menuitem>
+
+</odoo>
