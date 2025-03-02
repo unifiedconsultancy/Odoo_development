@@ -38,3 +38,9 @@ class LoanApplication(models.Model):
         default='draft',
         copy=False)
     notes = fields.Html(copy=False)
+
+    #Relational Fields
+    sale_order_id = fields.Many2one('sale.order')
+    product_id = fields.Many2one(comodel_name='product.product')
+    tag_ids = fields.Many2many(comodel_name='loan.application.tag')
+    document_ids = fields.One2many(comodel_name='loan.application.document', inverse_name='application_id')
