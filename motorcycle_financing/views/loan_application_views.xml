@@ -18,7 +18,7 @@
         <field name="name">loan.application.list</field>
         <field name="model">loan.application</field>
         <field name="arch" type="xml">
-            <list name="List of Loan Applications">
+            <list name="List of Loan Applications" default_order="date_application desc">
                 <field name="name"/>
                 <field name="date_application"/>
                 <field name="interest_rate"/>
@@ -27,13 +27,85 @@
                 <field name="state"/>
             </list>
         </field>
-
     </record>
 
     <!-- Action Menu -->
     <record id="action_financing" model="ir.actions.act_window">
         <field name="name">Financing</field>
         <field name="res_model">loan.application</field>
-        <field name="view_mode">list,search,form,kanban</field>
+        <field name="view_mode">list,search,kanban,form</field>
+    </record>
+    <record id="motor_cycle_finance_form_view" model="ir.ui.view">
+        <field name="name">motor.cycle.finance.form.view</field>
+        <field name="model">loan.application</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button title="Send Application" string="Send" invisible="state == 'approved'" type="object" name="action_send"/>
+                    <button title="Approve Loan" string="Approve" type="object" name="action_approve"/>
+                    <button title="Reject Loan" string="Reject" invisible="state == 'approved'" type="object" name="action_reject"/>
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,sent,reviewed,approved,rejected,signed"/>
+                </header>
+                <sheet>
+                    <h1 class="mb32">
+                        <field name="name"/>
+                    </h1>
+                    <field name="tag_ids" widget="many2many_tags" options="{'color_field':'color'}"/>
+                    <group>
+                        <group>
+                            <separator string="Customer Info"/>
+                            <field name="sale_order_id"/>
+                            <field name="partner_id" readonly="True"/>
+                            <field name="salesperson_id" readonly="True"/>
+                            <field name="document_count" readonly="True"/>
+                            <field name="ready_document_count" readonly="True"/>
+                        </group>
+                        <group>
+                            <separator string="Loan Info"/>
+                            <field name="sale_order_total"
+                                   widget="monetary"
+                                   options="{'currency_field':'currency_id'}"
+                                   readonly="True"/>
+                            <field name="down_payment"
+                                   widget="monetary"
+                                   options="{'currency_field':'currency_id'}"/>
+                            <field name="loan_amount"
+                                   widget="monetary"
+                                   options="{'currency_field':'currency_id'}"/>
+                            <field name="currency_id" readonly="True"/>
+                            <field name="interest_rate"/>
+                            <field name="loan_term"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="Documentation">
+                             <field
+                                name="document_ids">
+                                <!--widget="sol_o2m"
+                                mode="list,kanban">-->
+
+                                 <list editable="bottom">
+                                     <field name="name"/>
+                                     <field name="attachment"/>
+                                     <field name="type"/>
+                                     <button icon="fa-check" type="object" name="doc_status_accept"/>
+                                     <button icon="fa-times" type="object" name="doc_status_reject"/>
+                                     <field name="state" widget="badge"
+                                            decoration-success="state == 'accepted'"
+                                            decoration-danger="state == 'rejected'"
+                                            decoration-muted="state == 'new'"/>
+                                 </list>
+                             </field>
+
+
+                        </page>
+                        <page name="Notes">
+                            <field name="notes" placeholder="Writes your notes regarding the loan"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
     </record>
 </odoo>

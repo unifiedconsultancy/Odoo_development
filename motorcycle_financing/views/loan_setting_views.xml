@@ -1,17 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <record id="action_loan_document_type" model="ir.actions.act_window">
-        <field name="name">Loan Document Type</field>
-        <field name="res_model">loan.application.document.type</field>
-        <field name="view_mode">form</field>
-    </record>
-
-    <record id="action_loan_tag" model="ir.actions.act_window">
-        <field name="name">Loan Tag</field>
-        <field name="res_model">loan.application.tag</field>
-        <field name="view_mode">form</field>
-    </record>
-
-</odoo>
-
-
+<odoo></odoo>

@@ -15,5 +15,4 @@
             <menuitem id="loan_tag" name="Loan Application Tag" action="action_loan_tag"/>
         </menuitem>
     </menuitem>
-
 </odoo>

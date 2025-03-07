@@ -1,4 +1,5 @@
-from odoo import models, fields, api
+from odoo import models, fields, api, _
+from odoo.exceptions import UserError, ValidationError
 
 class LoanApplicationDocument(models.Model):
     _name = 'loan.application.document'
@@ -14,3 +15,9 @@ class LoanApplicationDocument(models.Model):
         ('accepted', 'Accepted'),
         ('rejected', 'Rejected'),],
         required=True, default='new')
+
+    def doc_status_accept(self):
+        self.write({'state': 'accepted'})
+
+    def doc_status_reject(self):
+        self.write({'state': 'rejected'})
