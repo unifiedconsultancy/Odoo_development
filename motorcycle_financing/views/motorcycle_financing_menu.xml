@@ -7,6 +7,12 @@
             <!--Sub Menu-->
             <menuitem id="motorcycle_financing_loan" name="Loan Application" action="action_financing"/>
         </menuitem>
-    </menuitem>
 
+        <!--Main Menu-->
+        <menuitem id="motorcycle_financing_app_setting" name="Settings">
+            <!--Sub Menu-->
+            <menuitem id="loan_document_type" name="Loan Application Document Type" action="action_loan_document_type"/>
+            <menuitem id="loan_tag" name="Loan Application Tag" action="action_loan_tag"/>
+        </menuitem>
+    </menuitem>
 </odoo>
